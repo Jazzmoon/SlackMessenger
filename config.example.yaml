@@ -1,0 +1,26 @@
+bot_auth_token: xxxxx
+channel_id: xxxxx
+last_message_timestamp: ""
+global_placeholders:
+  - cat: 😸 Cat
+actions:
+  - name: setup
+    description: This is the setup message.
+    markdown_text: >-
+      This is the setup message. 
+      Check the console for the timestamp of this message to update the `last_message_timestamp` in the config.yaml file.
+    print_timestamp_for_config: true
+  - name: timeNow
+    description: An example of a message with a timestamp
+    markdown_text: >-
+      Time of execution: <!date^{TS}^{date_long_pretty} at {time_secs}|{TSLocale}>
+    is_edit_only: true
+  - name: catApproves
+    description: Cat approves of this message
+    markdown_text: >-
+      *{gp.cat}* approves of this message
+    is_send_only: true
+urls:
+  - SEND_MESSAGE: https://slack.com/api/chat.postMessage
+  - UPDATE_MESSAGE: https://slack.com/api/chat.update
+  - DELETE_MESSAGE: https://slack.com/api/chat.delete
