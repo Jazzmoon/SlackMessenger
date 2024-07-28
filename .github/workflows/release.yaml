@@ -30,3 +30,4 @@ jobs:
           goversion: 1.22.5
           binary_name: "SlackMessenger"
           extra_files: config.example.yaml README.md
+          compress_assets: OFF
